@@ -1,5 +1,8 @@
 import { FC, useState, useEffect, useCallback, useMemo } from 'react'
 import { ILoginRequest, login, getUserData } from '../../api/user'
+// import { useAppDispatch } from '../../hooks/reduxHooks'
+// import { doLogin } from '../../store/slices/authSlice'
+
 import '../../styles/login.css'
 
 export interface ILoginProps {}
@@ -10,12 +13,19 @@ const initValues: ILoginRequest = {
 }
 
 const Login: FC<ILoginProps> = ({}) => {
-  useCallback(() => {}, [])
-  useMemo(() => {}, [])
-  useEffect(() => {}, [])
+  // const dispatch = useAppDispatch()
+
+  // useCallback(() => {}, [])
+  // useMemo(() => {}, [])
+  // useEffect(() => {}, [])
 
   const login = () => {
-    console.log('🚀TCL: >> login >> login')
+    // dispatch(doLogin(initValues))
+    //   .unwrap()
+    //   .then(() => {})
+    //   .catch(err => {
+    //     console.log('🚀TCL: >> login >> err', err)
+    //   })
   }
 
   return (

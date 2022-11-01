@@ -7,6 +7,7 @@ import { isRejectedWithValue, Middleware } from '@reduxjs/toolkit'
 export const errorLoggingMiddleware: Middleware = () => next => action => {
   if (isRejectedWithValue(action)) {
     console.log('🚀TCL: >> action.payload', action.payload)
+    alert(`${action.payload}`)
     // notificationController.error({message: action.payload})
   }
 
